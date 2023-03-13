@@ -1,5 +1,8 @@
 * {
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -36,6 +39,7 @@ body {
     left: 0;
     right: 0;
     border: 3px solid red;
+    display: none;
 }
 
 .footer > * {

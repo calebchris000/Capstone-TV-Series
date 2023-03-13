@@ -1,0 +1,56 @@
+.container {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+}
+
+.movie {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.posters {
+  width: 40%;
+  align-self: center;
+}
+
+.movieTitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.nameHeart {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.heart {
+  align-self: center;
+  padding: 0 16px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.likeCount {
+  text-align: center;
+  position: relative;
+  top: -10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.comment,
+.reservation {
+    width: 160px;
+    height: 40px;
+    margin: 10px 0;
+    align-self: center;
+}
