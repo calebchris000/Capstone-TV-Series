@@ -16,8 +16,8 @@ const renderMovies = async () => {
         </span>
         <p class="likeCount">5 likes</p>
 
-        <button class="comment">Comment</button>
-        <button class="reservation">Comment</button>
+        <button class="comment" id="${index}">Comment</button>
+        <button class="reservation">Reservation</button>
        
     </div>`;
   });

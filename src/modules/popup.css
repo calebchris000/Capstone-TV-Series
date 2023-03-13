@@ -1,0 +1,53 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 95vh;
+  background-color: rgba(0, 0, 0, 0.686);
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popupImg {
+  width: 12%;
+  align-self: center;
+}
+
+.popupName {
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.synopsis {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 10px 30%;
+
+}
+
+.synopsis > * {
+  text-align: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.metadata {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 10px 24%;
+    position: relative;
+    left: 100px;
+}
+.metadata p {
+    color: white;
+    font-weight: 600;
+}
