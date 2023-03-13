@@ -21,6 +21,7 @@ body {
     font-size: 1.1rem;
     text-decoration: none;
     color: white;
+    font-weight: 600;
 }
 
 .menu > a:hover {
@@ -40,4 +41,5 @@ body {
 .footer > * {
    padding: 10px;
    color: white;
+   font-size: 1.1rem;
 }
