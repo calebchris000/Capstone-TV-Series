@@ -1,0 +1,36 @@
+body{
+    width: 100%;
+    height: auto;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    height: 60px;
+}
+.menu{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    background: purple;
+    position: relative;
+    margin-top: -10px;
+}
+
+a:link{
+    text-decoration: none;
+}
+a{
+    color: blue;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    top: 10px;
+    left: 10%;
+}
+.logo{
+    width: 400px;
+    height: 400px;
+}
