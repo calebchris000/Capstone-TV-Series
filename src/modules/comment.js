@@ -19,17 +19,17 @@ const populatePopup = async (i) => {
   popup.innerHTML = item;
 };
 
-const displayPopup = async () => {
+const displayPopup =  () => {
   const popup = document.querySelector(".popup");
-  const data = await getMovie();
+  const container = document.querySelector(".container");
 
   for (let i = 0; i < 6; i++) {
-    const comment = document.getElementById(i);
-
-    comment.addEventListener("click", () => {
-      popup.style.display = "flex";
-      document.body.style.overflow = 'hidden'
-      populatePopup(i);
+    container.addEventListener("click", (e) => {
+      if (e.target.id ==`${i}`) {
+        popup.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        populatePopup(i);
+      }
     });
   }
 };
@@ -41,11 +41,11 @@ const cancel = async () => {
 
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("cancel")) {
-     popup.innerHTML = ''
-     popup.style.display = 'none'
-     document.body.style.overflow = 'auto'
+      popup.innerHTML = "";
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
     }
   });
 };
 
-cancel()
+cancel();
