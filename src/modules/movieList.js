@@ -1,11 +1,11 @@
-import { getMovie } from "./api.js";
+import { getMovie } from './api.js';
 
 const renderMovies = async () => {
   const data = await getMovie();
-  const cut = data.slice(0,6)
-  const container = document.querySelector(".container");
+  const cut = data.slice(0, 6);
+  const container = document.querySelector('.container');
 
-  let item = "";
+  let item = '';
 
   cut.forEach((object, index) => {
     item += `<div class="movie ">
@@ -22,7 +22,7 @@ const renderMovies = async () => {
     </div>`;
   });
 
-  container.innerHTML = item
+  container.innerHTML = item;
 };
 
 renderMovies();

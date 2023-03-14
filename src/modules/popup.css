@@ -48,6 +48,7 @@
   position: relative;
   left: 100px;
 }
+
 .metadata p {
   color: white;
   font-weight: 600;
@@ -55,12 +56,12 @@
 }
 
 .cancel {
-    position: absolute;
-    right: 30px;
-    color: white;
-    font-size: 4rem;
-    top:30px;
-    cursor: pointer;
+  position: absolute;
+  right: 30px;
+  color: white;
+  font-size: 4rem;
+  top: 30px;
+  cursor: pointer;
 }
 
 .comments>div{
