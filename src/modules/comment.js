@@ -4,9 +4,12 @@ const populatePopup = async (i) => {
   const popup = document.querySelector('.popup');
   const data = await getMovie();
   const item = `
+  
   <i class="cancel fa-solid fa-xmark"></i>
+  <div class="dome">
   <img class='popupImg' src="${data[i].image.original}"</img>
   <p class='popupName'>${data[i].name}</p>
+  </div>
   <div class="synopsis">${data[i].summary}</div>
   <div class="metadata">
   <p>Language: ${data[i].language}</p>
@@ -28,8 +31,8 @@ const populatePopup = async (i) => {
             <div class="enter-comments">
                 <h2>Add a Comment</h2>
                 <form action="submit" class="submit-form">
-                    <input type="text" class="name" placeholder="Your Name" required>
-                    <textarea name="comments" id="comm" cols="30" rows="10" class="text-area" required>Your Insights</textarea>
+                    <input type="text" name="username" class="name" placeholder="Your Name" required>
+                    <textarea name="comment" id="comm" cols="30" rows="10" class="text-area" required>Your Insights</textarea>
                     <button type="submit" class="submit">Comment</button>
                 </form>
             </div>

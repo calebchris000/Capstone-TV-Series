@@ -4,17 +4,26 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  height: auto;
+  height: 700px;
   background-color: rgba(0, 0, 0, 0.686);
   z-index: 2;
   display: none;
   flex-direction: column;
   justify-content: center;
+  overflow: auto;
+}
+.popup::-webkit-scrollbar {
+  width: 0;
 }
 
 .popupImg {
+  position: relative;
+  left: 44%;
   width: 12%;
   align-self: center;
+}
+.dome{
+  margin-top: 420px;
 }
 
 .popupName,h2 {
