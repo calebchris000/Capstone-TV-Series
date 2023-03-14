@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  height: 95vh;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.686);
   z-index: 2;
   display: none;
@@ -17,11 +17,13 @@
   align-self: center;
 }
 
-.popupName {
+.popupName,h2 {
   text-align: center;
   font-size: 1.1rem;
   color: white;
   font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .synopsis {
@@ -59,4 +61,40 @@
     font-size: 4rem;
     top:30px;
     cursor: pointer;
+}
+
+.comments>div{
+  width: 80%;
+  height: auto;
+  border: 1px solid white;
+  position: relative;
+  left: 10%;
+}
+input,textarea,button{
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+.submit-form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+
+.name{
+  height: 40px;
+}
+.submit{
+  height: 40px;
+  width: 10%;
+  margin-bottom: 50px;
+}
+.comments>div>p{
+  color: white;
+  position: relative;
+  left: 15px;
+  top: 3px;
+  padding-bottom: 4px;
 }

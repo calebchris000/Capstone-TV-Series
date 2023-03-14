@@ -12,8 +12,30 @@ const populatePopup = async (i) => {
   <p>Release: ${data[i].premiered.slice(0, 4)}</p>
   <p>Genres: ${data[i].genres}</p>
   <p>Rating: ${data[i].rating.average}</p>
+  <p>Runtime: ${data[i].runtime} min</p>
+  <p>Official site: <a href="${data[i].officialSite}">Click here</a> </p>
   </div>
+  <div class="comments">
+                <h2>Comments ()</h2>
+                <div>
+                    <p>12/05/35 Ikoote: Ilove this movie</p>
+                    <p>12/05/35 Ikoote: Ilove this movie</p>
+                    <p>12/05/35 Ikoote: Ilove this movie</p>
+                    
+                </div>
+            </div>
+            <div class="enter-comments">
+                <h2>Add a Comment</h2>
+                <form action="submit" class="submit-form">
+                    <input type="text" class="name" placeholder="Your Name" required>
+                    <textarea name="comments" id="comm" cols="30" rows="10" class="text-area" required>Your Insights</textarea>
+                    <button type="submit" class="submit">Comment</button>
+                </form>
+            </div>
   
+
+
+
   `;
 
   popup.innerHTML = item;
