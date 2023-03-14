@@ -9,9 +9,19 @@ export const getMovie = async () => {
 
 export const getLikes = async () => {
   const users =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VM7kTFPGN3ap0GuV7EM3/likes";
+    "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/likes";
   const request = await fetch(users);
   const response = await request.json();
 
   return response;
+};
+
+export const postLikes = async (id) => {
+  const users =
+    "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/likes";
+  await fetch(users, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({item_id: id.toString() }),
+  });
 };
