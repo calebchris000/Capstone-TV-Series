@@ -10,20 +10,24 @@ const get = async () => {
   }
 };
 
-get();
-
-const post =  () => {
+const post = () => {
   const container = document.querySelector(".container");
 
   container.addEventListener("click", async (e) => {
     if (e.target.classList.contains("heart")) {
-      e.target.style.color = "red";
+      transition(e);
       await postLikes(e.target.id[4]);
+      await get();
     }
   });
 };
 
-post();
+const transition = (e) => {
+  setTimeout(() => {
+    e.target.style.color = "white";
+  }, 1000);
+  e.target.style.color = "red";
+};
 
 const load = () => {
   post();
