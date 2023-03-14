@@ -36,6 +36,12 @@
   padding: 0 16px;
   color: white;
   font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.heart:active {
+   transform: scale(0.8);
 }
 
 .likeCount {

@@ -8,13 +8,13 @@ const renderMovies = async () => {
   let item = "";
 
   cut.forEach((object, index) => {
-    item += `<div class="movie">
+    item += `<div class="movie ">
         <img class='posters' src="${object.image.medium}">
         <span class='nameHeart'>
          <p class="movieTitle">${object.name}</p>
-         <i class="heart fa-regular fa-heart"></i>
+         <i class="heart fa-regular fa-heart" id='like${index}'></i>
         </span>
-        <p class="likeCount">5 likes</p>
+        <p class="likeCount" id='count${index}'></p>
 
         <button class="comment" id="${index}">Comment</button>
         <button class="reservation">Reservation</button>
