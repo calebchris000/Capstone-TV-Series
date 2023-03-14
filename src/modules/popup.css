@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  height: 700px;
+  height:90vh;
   background-color: rgba(0, 0, 0, 0.686);
   z-index: 2;
   display: none;
@@ -17,6 +17,7 @@
 }
 
 .popupImg {
+  margin-top: 240px;
   position: relative;
   left: 44%;
   width: 12%;
