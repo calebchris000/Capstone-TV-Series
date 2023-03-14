@@ -17,7 +17,7 @@ const populatePopup = async (i) => {
   <p>Genres: ${data[i].genres}</p>
   <p>Rating: ${data[i].rating.average}</p>
   <p>Runtime: ${data[i].runtime} min</p>
-  <p>Official site: <a href="${data[i].officialSite}">Click here</a> </p>
+  <p class="site">Official site: <a href="${data[i].officialSite}">Click here</a> </p>
   </div>
   <div class="comments">
                 <h2>Comments ()</h2>
