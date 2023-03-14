@@ -1,8 +1,8 @@
 .container {
-    margin: 50px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:10px;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .movie {
@@ -41,7 +41,7 @@
 }
 
 .heart:active {
-   transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .likeCount {
@@ -55,8 +55,8 @@
 
 .comment,
 .reservation {
-    width: 160px;
-    height: 40px;
-    margin: 10px 0;
-    align-self: center;
+  width: 160px;
+  height: 40px;
+  margin: 10px 0;
+  align-self: center;
 }

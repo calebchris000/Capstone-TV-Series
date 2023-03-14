@@ -1,8 +1,9 @@
-import { getMovie } from "./api.js";
+import { getMovie } from './api.js';
+
 const populatePopup = async (i) => {
-  const popup = document.querySelector(".popup");
+  const popup = document.querySelector('.popup');
   const data = await getMovie();
-  let item = `
+  const item = `
   <i class="cancel fa-solid fa-xmark"></i>
   <img class='popupImg' src="${data[i].image.original}"</img>
   <p class='popupName'>${data[i].name}</p>
@@ -19,15 +20,15 @@ const populatePopup = async (i) => {
   popup.innerHTML = item;
 };
 
-const displayPopup =  () => {
-  const popup = document.querySelector(".popup");
-  const container = document.querySelector(".container");
-
-  for (let i = 0; i < 6; i++) {
-    container.addEventListener("click", (e) => {
-      if (e.target.id ==`${i}`) {
-        popup.style.display = "flex";
-        document.body.style.overflow = "hidden";
+const displayPopup = () => {
+  const popup = document.querySelector('.popup');
+  const container = document.querySelector('.container');
+  const loop = 1;
+  for (let i = 0; i < 6; i += loop) {
+    container.addEventListener('click', (e) => {
+      if (e.target.id === `${i}`) {
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
         populatePopup(i);
       }
     });
@@ -37,13 +38,13 @@ const displayPopup =  () => {
 displayPopup();
 
 const cancel = async () => {
-  const popup = document.querySelector(".popup");
+  const popup = document.querySelector('.popup');
 
-  document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("cancel")) {
-      popup.innerHTML = "";
-      popup.style.display = "none";
-      document.body.style.overflow = "auto";
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('cancel')) {
+      popup.innerHTML = '';
+      popup.style.display = 'none';
+      document.body.style.overflow = 'auto';
     }
   });
 };
