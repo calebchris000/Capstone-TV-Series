@@ -25,11 +25,10 @@
 }
 
 .synopsis {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin: 10px 30%;
-
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 10px 30%;
 }
 
 .synopsis > * {
@@ -39,15 +38,25 @@
 }
 
 .metadata {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    margin: 10px 24%;
-    position: relative;
-    left: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin: 10px 24%;
+  position: relative;
+  left: 100px;
 }
 .metadata p {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cancel {
+    position: absolute;
+    right: 30px;
     color: white;
-    font-weight: 600;
+    font-size: 4rem;
+    top:30px;
+    cursor: pointer;
 }

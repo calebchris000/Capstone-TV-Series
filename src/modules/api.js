@@ -1,6 +1,4 @@
 const TVAPI = "https://api.tvmaze.com/shows";
-const users =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/";
 
 export const getMovie = async () => {
   const request = await fetch(TVAPI);
@@ -9,7 +7,9 @@ export const getMovie = async () => {
   return response;
 };
 
-const getComment = async () => {
+export const getLikes = async () => {
+  const users =
+  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VM7kTFPGN3ap0GuV7EM3/likes";
   const request = await fetch(users);
   const response = await request.json();
 
