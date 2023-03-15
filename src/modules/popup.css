@@ -79,10 +79,10 @@ h2 {
   cursor: pointer;
 }
 
-.comments > div {
+.comments {
   width: 80%;
   height: auto;
-  border: 1px solid white;
+  border: 2px solid white;
   position: relative;
   left: 10%;
 }
@@ -109,7 +109,7 @@ button {
   width: 10%;
   margin-bottom: 50px;
 }
-.comments > div > p {
+.comments > p {
   color: white;
   position: relative;
   left: 15px;
