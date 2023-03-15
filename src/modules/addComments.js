@@ -1,18 +1,17 @@
 import { addData, getComments } from "./api.js";
+import { universalCount } from "./count.js";
 
-
+const count = universalCount()
 const postComment = () => {
   const loop = 1;
 
-  for (let i = 0; i < 6; i += loop) {
+  for (let i = 0; i < count; i += loop) {
     document.addEventListener("click", async (e) => {
       if (e.target.id === "submit" + i) {
         e.preventDefault();
         const userInput = document.querySelector(".name");
         const commentInput = document.querySelector(".text-area");
-        let user = userInput.value;
-        let comment = commentInput.value
-        await addData(i, user, comment);
+        await addData(i, userInput.value, commentInput.value);
         userInput.value = ''
         commentInput.value = ''
       }
@@ -24,7 +23,7 @@ const postComment = () => {
 postComment();
 
 const retreiveComments = () => {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < count; i++) {
     document.addEventListener("click", (e) => {
       if (e.target.id === `${i}`) {
 

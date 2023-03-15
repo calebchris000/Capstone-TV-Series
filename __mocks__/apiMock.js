@@ -1,7 +1,7 @@
 const testAPI = "https://jsonplaceholder.typicode.com/todos/1";
 
 const getMovieMock = async () => {
-  const request = await fetch(testAPI);
+  const request = await fetch(testAPI); 
   const response = await request.json();
 
   return response;
