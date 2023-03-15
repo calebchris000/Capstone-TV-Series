@@ -11,7 +11,6 @@ const get = async () => {
       let correctKey = data.filter((x) => x.item_id === i.toString());
       if(correctKey[0] !== undefined) {
         like.textContent = `${correctKey[0].likes} likes`;
-
       }
       else {
       like.textContent = `0 likes`;
