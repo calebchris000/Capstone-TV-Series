@@ -2,7 +2,7 @@ const {getMovieMock, postMovieMock} = require("../__mocks__/apiMock.js");
 
 describe("Testing the API Request and response", () => {
   test("Retrieving data from the API", async () => {
-    const data = await getMovieMock();
+    const data = await getMovieMock(); 
 
     expect(data.title).toEqual("delectus aut autem");
   });
