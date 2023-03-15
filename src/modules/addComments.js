@@ -1,35 +1,59 @@
+import { addData, getComments } from "./api.js";
 
-import { addData } from "./api.js";
+// const addComm = () => {
+//     const form = document.querySelector('.submit-form');
+//     form.addEventListener('click', async (e) => {
+//       if (e.target.classList.contains('submit')) {
+//         e.preventDefault();
+//        const userInput =  document.querySelector('.name');
+//        const nameData = userInput.value;
+//         const commentInput = document.querySelector('.text-area');
+//         const commentData = commentInput.value;
+//         await addData(1, nameData, commentData);
+//       }
+//     });
+//   };
 
+//  addComm()
 
+const postComment = () => {
+  const loop = 1;
 
-const addComm = () => {
-    const form = document.querySelector('.submit-form');
-    form.addEventListener('click', async () => {
-      if (e.target.classList.contains('submit')) {
+  for (let i = 0; i < 6; i += loop) {
+    document.addEventListener("click", async (e) => {
+      if (e.target.id === "submit" + i) {
         e.preventDefault();
-        user =  document.querySelector('.name').value;
-        comment = document.querySelector('.text-area').value;
-        await addData(1);
+        const userInput = document.querySelector(".name");
+        const commentInput = document.querySelector(".text-area");
+        let user = userInput.value;
+        let comment = commentInput.value
+        await addData(i, user, comment);
+        userInput.value = ''
+        commentInput.value = ''
+      }
+
+    });
+  }
+};
+
+postComment();
+
+const retreiveComments = () => {
+  for (let i = 0; i < 6; i++) {
+    document.addEventListener("click", (e) => {
+      if (e.target.id === `${i}`) {
+
+        setTimeout(async () => {
+          const comments = document.getElementById("comments");
+          const data = await getComments(i);
+          data.forEach((element) => {
+            let item = `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
+            comments.insertAdjacentHTML("beforeend", item);
+          });
+        }, 1000);
+
       }
     });
-  };  
-
- 
-  const addComment = (res) => {
-    const comments = document.querySelector('.comments');
-    const list = document.createElement('div');
-    list.innerHTML = `
-    <p>${res.creation_date} ${res.username}: ${res.comment}</p>
-    `
-    comments.appendChild(list);
-   }
-
-  const displayComments = async () => {
-    const com = await getComments();
-    com.forEach(res => addComment(res));
   }
-
-  window.onload = displayComments();
-  window.onload = addComm();
-
+};
+retreiveComments()

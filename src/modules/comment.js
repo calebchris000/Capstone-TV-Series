@@ -20,16 +20,14 @@ const populatePopup = async (i) => {
   <p class="site">Official site: <a href="${data[i].officialSite}">Click here</a> </p>
   </div>
         <h2>Comments</h2>
-  <div class="comments">
-                
-              
-            </div>
+  <div id='comments' class="comments"> </div>
+
             <div class="enter-comments">
                 <h2>Add a Comment</h2>
-                <form action="submit" class="submit-form">
+                <form action="" class="submit-form">
                     <input type="text" name="username" class="name" placeholder="Your Name" required>
                     <textarea name="comment" id="comm" cols="30" rows="10" class="text-area" required>Your Insights</textarea>
-                    <button type="submit" class="submit">Comment</button>
+                    <button type="button" id='submit${i}' class="submit">Comment</button>
                 </form>
             </div>
   

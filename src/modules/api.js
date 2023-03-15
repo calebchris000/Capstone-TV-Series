@@ -1,7 +1,9 @@
-const TVAPI = 'https://api.tvmaze.com/shows';
-const users = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/likes';
-const comments = "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/comments";
-const form = document.querySelector('.submit-form');
+const TVAPI = "https://api.tvmaze.com/shows";
+const users =
+  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/likes";
+const comments =
+  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/comments";
+const form = document.querySelector(".submit-form");
 
 export const getMovie = async () => {
   const request = await fetch(TVAPI);
@@ -19,34 +21,29 @@ export const getLikes = async () => {
 
 export const postLikes = async (id) => {
   await fetch(users, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ item_id: id.toString() }),
   });
 };
 
+export const addData = async (id, user, comment) => {
+  await fetch(comments, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      item_id: id,
+      username: user,
+      comment: comment,
+    }),
+  });
+};
 
+export const getComments = async (id) => {
+  const comments =
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/comments?item_id=${id}`;
+  const request = await fetch(comments);
+  const response = await request.json();
 
-  export const addData = async(id,user,comment) => {  
-    fetch(comments, {
-      method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        
-          item_id: id.toString(),
-          username: user.toString(),
-          comment: comment.toString(),
-      }),
-    })
-  }
-
-
-  export const getComments = async () => {
-    const request =await fetch(comments);
-    const response = await request.json();
-  
-    return response;
-  }
-
-
-
+  return response;
+};
