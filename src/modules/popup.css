@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95vw;
+  width: 90vw;
   height: 95vh;
   background: rgba(0, 0, 0, 0.37);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -19,12 +19,17 @@
 .popup::-webkit-scrollbar {
   width: 0;
 }
+h1{
+  font-size: 15px;
+  color: white;
+}
 
 .popupImg {
-  margin-top: 240px;
+  margin-top: 400px;
   position: relative;
-  left: 44%;
-  width: 12%;
+  left: 35%;
+  height: 400px;
+  width: 30%;
   align-self: center;
 }
 .dome {
@@ -45,7 +50,7 @@ h2 {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin: 10px 30%;
+  margin: 10px 25%;
 }
 
 .synopsis > * {
@@ -59,9 +64,9 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
-  margin: 10px 24%;
+  margin: 10px 20%;
   position: relative;
-  left: 100px;
+  left: 5%;
 }
 
 .metadata p {
@@ -80,33 +85,37 @@ h2 {
 }
 
 .comments {
-  width: 80%;
+  width: 50%;
   height: auto;
   border: 2px solid white;
   position: relative;
-  left: 10%;
+  left: 25%;
 }
 input,
 textarea,
 button {
   border: 1px solid orange;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .submit-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 80%;
+  width: 50%;
   position: relative;
-  left: 10%;
+  left: 25%;
 }
 
+textarea{
+  width: 60%;
+}
 .name {
   height: 40px;
+  width: 300px;
 }
 .submit {
   height: 40px;
-  width: 10%;
+  width: 20%;
   margin-bottom: 50px;
 }
 .comments > p {

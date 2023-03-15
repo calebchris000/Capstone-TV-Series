@@ -1,6 +1,6 @@
 import { getMovie } from './api.js';
 
-const populatePopup = async (i) => {
+const populatePopup = async (i,index) => {
   const popup = document.querySelector('.popup');
   const data = await getMovie();
   const item = `
@@ -19,7 +19,8 @@ const populatePopup = async (i) => {
   <p>Runtime: ${data[i].runtime} min</p>
   <p class="site">Official site: <a href="${data[i].officialSite}">Click here</a> </p>
   </div>
-        <h2>Comments</h2>
+        <h2 id="number">Comments</h2>
+        
   <div id='comments' class="comments"> </div>
 
             <div class="enter-comments">

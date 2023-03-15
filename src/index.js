@@ -6,6 +6,7 @@ require('./modules/movieList.js');
 require('./modules/comment.js');
 require('./modules/likeCount.js');
 require('./modules/addComments.js');
+require('./modules/commentCount.js');
 
 
 
