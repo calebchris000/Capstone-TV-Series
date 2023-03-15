@@ -8,12 +8,25 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.609);
+  background-image: url(./images/background.jpg);
+  z-index: 1;
+  background-attachment: fixed;  
 }
 
 .header {
   margin-top: 50px;
 }
+
+.movieCount  {
+  color: white;
+  position: relative;
+  z-index: 1;
+  border: 2px solid white;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+
 
 .menu {
   display: flex;
