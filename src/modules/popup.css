@@ -11,29 +11,34 @@
   -webkit-backdrop-filter: blur(6.1px);
   border: 1px solid rgba(0, 0, 0, 0.3);
   z-index: 2;
+  border-radius: 24px;
   display: none;
+}
+
+.popupItems {
+  margin-top: 100px;
+  align-items: center;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   overflow: auto;
 }
-.popup::-webkit-scrollbar {
-  width: 0;
-}
+
 h1{
   font-size: 15px;
   color: white;
 }
 
-.popupImg {
-  margin-top: 400px;
-  position: relative;
-  left: 35%;
-  height: 400px;
-  width: 30%;
-  align-self: center;
+.imgName {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.dome {
-  margin-top: 420px;
+
+.popupImg {
+  width: 24%;
+  border-radius: 16px;
 }
 
 .popupName,
@@ -42,8 +47,7 @@ h2 {
   font-size: 1.1rem;
   color: white;
   font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .synopsis {
@@ -63,8 +67,8 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: center;
-  margin: 10px 20%;
+  gap: 10px;
+  margin: 10px 10%;
   position: relative;
   left: 5%;
 }
@@ -73,6 +77,7 @@ h2 {
   color: white;
   font-weight: 600;
   font-size: 0.9rem;
+
 }
 
 .cancel {
@@ -85,43 +90,46 @@ h2 {
 }
 
 .comments {
-  width: 50%;
-  height: auto;
-  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  left: 25%;
+  width: 30%;
 }
-input,
-textarea,
-button {
-  border: 1px solid orange;
-  border-radius: 8px;
-}
+
 .submit-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
   position: relative;
-  left: 25%;
 }
 
-textarea{
-  width: 60%;
-}
-.name {
-  height: 40px;
-  width: 300px;
-}
+.name,
 .submit {
   height: 40px;
-  width: 20%;
-  margin-bottom: 50px;
+  border: none;
+  border-radius: 16px;
+  text-indent: 10px;
+}
+
+.name::placeholder,
+.text-area::placeholder {
+  font-size: 1rem;
+}
+
+.text-area {
+  height: 300px;
+  border: none;
+  border-radius: 16px;
+  text-indent: 10px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
 }
 .comments > p {
   color: white;
   position: relative;
-  left: 15px;
   top: 3px;
   padding-bottom: 4px;
 }
