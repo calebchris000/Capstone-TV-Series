@@ -3,9 +3,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  height: 700px;
-  background-color: rgba(0, 0, 0, 0.686);
+  width: 95vw;
+  height: 95vh;
+  background: rgba(0, 0, 0, 0.37);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   z-index: 2;
   display: none;
   flex-direction: column;
@@ -17,16 +21,18 @@
 }
 
 .popupImg {
+  margin-top: 240px;
   position: relative;
   left: 44%;
   width: 12%;
   align-self: center;
 }
-.dome{
+.dome {
   margin-top: 420px;
 }
 
-.popupName,h2 {
+.popupName,
+h2 {
   text-align: center;
   font-size: 1.1rem;
   color: white;
@@ -65,7 +71,7 @@
 }
 
 .cancel {
-  position: absolute;
+  position: fixed;
   right: 30px;
   color: white;
   font-size: 4rem;
@@ -73,18 +79,20 @@
   cursor: pointer;
 }
 
-.comments>div{
+.comments > div {
   width: 80%;
   height: auto;
   border: 1px solid white;
   position: relative;
   left: 10%;
 }
-input,textarea,button{
+input,
+textarea,
+button {
   border: 1px solid orange;
   border-radius: 5px;
 }
-.submit-form{
+.submit-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -93,18 +101,29 @@ input,textarea,button{
   left: 10%;
 }
 
-.name{
+.name {
   height: 40px;
 }
-.submit{
+.submit {
   height: 40px;
   width: 10%;
   margin-bottom: 50px;
 }
-.comments>div>p{
+.comments > div > p {
   color: white;
   position: relative;
   left: 15px;
   top: 3px;
   padding-bottom: 4px;
+}
+
+.site > a {
+  color: red;
+  text-decoration: none;
+}
+
+.site > a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
 }
