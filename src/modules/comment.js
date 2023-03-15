@@ -1,12 +1,15 @@
 import { getMovie } from './api.js';
+import { universalCount } from './count.js';
 
+const count = universalCount()
 const populatePopup = async (i,index) => {
   const popup = document.querySelector('.popup');
   const data = await getMovie();
   const item = `
   
+  <div class='popupItems'>
   <i class="cancel fa-solid fa-xmark"></i>
-  <div class="dome">
+  <div class="imgName">
   <img class='popupImg' src="${data[i].image.original}"</img>
   <p class='popupName'>${data[i].name}</p>
   </div>
@@ -19,7 +22,7 @@ const populatePopup = async (i,index) => {
   <p>Runtime: ${data[i].runtime} min</p>
   <p class="site">Official site: <a href="${data[i].officialSite}">Click here</a> </p>
   </div>
-        <h2 id="number">Comments</h2>
+        <h2 id="number">Comment</h2>
         
   <div id='comments' class="comments"> </div>
 
@@ -27,9 +30,10 @@ const populatePopup = async (i,index) => {
                 <h2>Add a Comment</h2>
                 <form action="" class="submit-form">
                     <input type="text" name="username" class="name" placeholder="Your Name" required>
-                    <textarea name="comment" id="comm" cols="30" rows="10" class="text-area" required>Your Insights</textarea>
+                    <textarea name="comment" id="comm" class="text-area" placeholder="Your Insights" required></textarea>
                     <button type="button" id='submit${i}' class="submit">Comment</button>
                 </form>
+            </div>
             </div>
   
   `;
@@ -41,7 +45,7 @@ const displayPopup = () => {
   const popup = document.querySelector('.popup');
   const container = document.querySelector('.container');
   const loop = 1;
-  for (let i = 0; i < 6; i += loop) {
+  for (let i = 0; i < count; i += loop) {
     container.addEventListener('click', (e) => {
       if (e.target.id === `${i}`) {
         popup.style.display = 'flex';
