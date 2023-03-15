@@ -27,21 +27,15 @@ export const postLikes = async (id) => {
 
 
 
-  export const addData = async(id) => {
-    e.preventDefault();
-  
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-    const jsonData = JSON.stringify(data);
-  
+  export const addData = async(id,user,comment) => {  
     fetch(comments, {
       method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         
           item_id: id.toString(),
-          jsonData,
-      
+          username: user.toString(),
+          comment: comment.toString(),
       }),
     })
   }

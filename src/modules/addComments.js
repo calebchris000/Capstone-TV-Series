@@ -1,18 +1,22 @@
 
-import { getComments,addData } from "./api.js";
+import { addData } from "./api.js";
+
+
 
 const addComm = () => {
-    form.addEventListener('click', async (e) => {
+    const form = document.querySelector('.submit-form');
+    form.addEventListener('click', async () => {
       if (e.target.classList.contains('submit')) {
-        await addData(e.target.id[4]);
-        document.querySelector('.name').value = '';
-    document.querySelector('.text-area').value = '';
+        e.preventDefault();
+        user =  document.querySelector('.name').value;
+        comment = document.querySelector('.text-area').value;
+        await addData(1);
       }
     });
   };  
 
  
-  function  addComment() {
+  const addComment = (res) => {
     const comments = document.querySelector('.comments');
     const list = document.createElement('div');
     list.innerHTML = `
@@ -21,11 +25,11 @@ const addComm = () => {
     comments.appendChild(list);
    }
 
-  const displayComments = async (id) => {
+  const displayComments = async () => {
     const com = await getComments();
     com.forEach(res => addComment(res));
   }
 
   window.onload = displayComments();
-  addComm();
+  window.onload = addComm();
 
