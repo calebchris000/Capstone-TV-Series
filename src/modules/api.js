@@ -1,8 +1,8 @@
 const TVAPI = "https://api.tvmaze.com/shows";
 const users =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/likes";
+  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/likes";
 const comments =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/comments";
+  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/comments";
 const form = document.querySelector(".submit-form");
 
 export const getMovie = async () => {
@@ -41,7 +41,7 @@ export const addData = async (id, user, comment) => {
 
 export const getComments = async (id) => {
   const comments =
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RTGQ21pCnTErDACymSN1/comments?item_id=${id}`;
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/comments?item_id=${id}`;
   const request = await fetch(comments);
   const response = await request.json();
 
