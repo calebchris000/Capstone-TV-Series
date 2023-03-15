@@ -37,9 +37,6 @@ const populatePopup = async (i) => {
                 </form>
             </div>
   
-
-
-
   `;
 
   popup.innerHTML = item;
