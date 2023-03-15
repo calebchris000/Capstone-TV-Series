@@ -19,14 +19,10 @@ const populatePopup = async (i) => {
   <p>Runtime: ${data[i].runtime} min</p>
   <p class="site">Official site: <a href="${data[i].officialSite}">Click here</a> </p>
   </div>
+        <h2>Comments</h2>
   <div class="comments">
-                <h2>Comments ()</h2>
-                <div>
-                    <p>12/05/35 Ikoote: Ilove this movie</p>
-                    <p>12/05/35 Ikoote: Ilove this movie</p>
-                    <p>12/05/35 Ikoote: Ilove this movie</p>
-                    
-                </div>
+                
+              
             </div>
             <div class="enter-comments">
                 <h2>Add a Comment</h2>
