@@ -1,33 +1,44 @@
-import { postLikes, getLikes } from './api.js';
+import { postLikes, getLikes } from "./api.js";
+import { universalCount } from "./count.js";
+const count = universalCount();
 
 const get = async () => {
   const data = await getLikes();
   const loop = 1;
-  for (let i = 0; i < 6; i += loop) {
+  for (let i = 0; i < count; i += loop) {
     if (document.body.querySelector(`#count${i}`)) {
       const like = document.querySelector(`#count${i}`);
-      like.textContent = `${data[i].likes} likes`;
+      let correctKey = data.filter((x) => x.item_id === i.toString());
+      if(correctKey[0] !== undefined) {
+        like.textContent = `${correctKey[0].likes} likes`;
+
+      }
+      else {
+      like.textContent = `0 likes`;
+
+      }
     }
   }
 };
 
 const transition = (e) => {
   setTimeout(() => {
-    e.target.style.color = 'white';
+    e.target.style.color = "white";
   }, 1000);
-  e.target.style.color = 'red';
+  e.target.style.color = "red";
 };
 
 const post = () => {
-  const container = document.querySelector('.container');
-
-  container.addEventListener('click', async (e) => {
-    if (e.target.classList.contains('heart')) {
-      transition(e);
-      await postLikes(e.target.id[4]);
-      await get();
+  setTimeout(() => {
+    for (let i = 0; i < count; i++) {
+      const heart = document.querySelector(`#like${i}`);
+      heart.addEventListener("click", async (e) => {
+        transition(e);
+        await postLikes(i);
+        await get();
+      });
     }
-  });
+  }, 1000);
 };
 
 const load = () => {
