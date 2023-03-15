@@ -3,19 +3,28 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  margin: 50px 20px;
 }
 
 .movie {
   display: flex;
-  padding: 10px;
+  padding: 20px;
   flex-direction: column;
   justify-content: center;
   border: 2px solid white;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .posters {
   width: 40%;
   align-self: center;
+  border-radius: 24px;
 }
 
 .movieTitle {
@@ -59,4 +68,7 @@
   height: 40px;
   margin: 10px 0;
   align-self: center;
+  border: none;
+  border-radius: 16px;
+
 }
