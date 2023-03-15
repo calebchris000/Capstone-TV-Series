@@ -1,16 +1,18 @@
-import { universalCount } from "./count.js";
+import universalCount from './count.js';
+
 const count = universalCount();
 setTimeout(() => {
-  for (let i = 0; i < count; i++) {
+  const loop = 1;
+  for (let i = 0; i < count; i += loop) {
     const reservation = document.getElementById(`reserve${i}`);
 
-    reservation.addEventListener("click", () => {
+    reservation.addEventListener('click', () => {
       setTimeout(() => {
-      reservation.style.border = 'none'
-      reservation.innerHTML = "Reservation";
+        reservation.style.border = 'none';
+        reservation.innerHTML = 'Reservation';
       }, 1000);
-      reservation.style.border = '3px solid green'
-      reservation.innerHTML = "Two Students";
+      reservation.style.border = '3px solid green';
+      reservation.innerHTML = 'Two Students';
     });
   }
 }, 1000);

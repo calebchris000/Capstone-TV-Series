@@ -1,8 +1,8 @@
 import { getMovie } from './api.js';
-import { universalCount } from './count.js';
+import universalCount from './count.js';
 
-const count = universalCount()
-const populatePopup = async (i,index) => {
+const count = universalCount();
+const populatePopup = async (i) => {
   const popup = document.querySelector('.popup');
   const data = await getMovie();
   const item = `
@@ -20,7 +20,9 @@ const populatePopup = async (i,index) => {
   <p>Genres: ${data[i].genres}</p>
   <p>Rating: ${data[i].rating.average}</p>
   <p>Runtime: ${data[i].runtime} min</p>
-  <p class="site">Official site: <a href="${data[i].officialSite}">Click here</a> </p>
+  <p class="site">Official site: <a href="${
+  data[i].officialSite
+}">Click here</a> </p>
   </div>
         <h2 id="number">Comment</h2>
         

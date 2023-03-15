@@ -1,12 +1,12 @@
-import { getMovie } from "./api.js";
-import { universalCount } from "./count.js";
+import { getMovie } from './api.js';
+import universalCount from './count.js';
 
-const count = universalCount()
+const count = universalCount();
 const countMovies = () => {
-  const movieCount = document.querySelector(".movieCount");
+  const movieCount = document.querySelector('.movieCount');
 
   setTimeout(() => {
-    const movies = document.querySelectorAll(".movie");
+    const movies = document.querySelectorAll('.movie');
     movieCount.innerHTML = movies.length;
   }, 1000);
 };
@@ -16,9 +16,9 @@ countMovies();
 const renderMovies = async () => {
   const data = await getMovie();
   const cut = data.slice(0, count);
-  const container = document.querySelector(".container");
+  const container = document.querySelector('.container');
 
-  let item = "";
+  let item = '';
 
   cut.forEach((object, index) => {
     item += `<div class="movie ">

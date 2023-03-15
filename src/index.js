@@ -7,9 +7,4 @@ require('./modules/comment.js');
 require('./modules/likeCount.js');
 require('./modules/addComments.js');
 require('./modules/commentCount.js');
-require('./modules/reservation_null.js')
-
-
-
-
-
+require('./modules/reservation_null.js');

@@ -1,9 +1,6 @@
-const TVAPI = "https://api.tvmaze.com/shows";
-const users =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/likes";
-const comments =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/comments";
-const form = document.querySelector(".submit-form");
+const TVAPI = 'https://api.tvmaze.com/shows';
+const users = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/likes';
+const comments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/comments';
 
 export const getMovie = async () => {
   const request = await fetch(TVAPI);
@@ -21,27 +18,26 @@ export const getLikes = async () => {
 
 export const postLikes = async (id) => {
   await fetch(users, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ item_id: id.toString() }),
   });
 };
 
 export const addData = async (id, user, comment) => {
   await fetch(comments, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       item_id: id,
       username: user,
-      comment: comment,
+      comment,
     }),
   });
 };
 
 export const getComments = async (id) => {
-  const comments =
-    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/comments?item_id=${id}`;
+  const comments = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/LHFUkzcDvsXW9NARtYgJ/comments?item_id=${id}`;
   const request = await fetch(comments);
   const response = await request.json();
 

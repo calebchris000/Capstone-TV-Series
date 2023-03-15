@@ -1,2 +1,2 @@
-
-export const universalCount = () => 30
+const universalCount = () => 30;
+export default universalCount;
