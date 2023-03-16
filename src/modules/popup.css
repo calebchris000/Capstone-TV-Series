@@ -1,0 +1,149 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 95vh;
+  background: rgba(0, 0, 0, 0.37);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  border-radius: 24px;
+  display: none;
+}
+
+.popupItems {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.popupItems::-webkit-scrollbar {
+  width: 0;
+}
+
+h1 {
+  font-size: 15px;
+  color: white;
+}
+
+.imgName {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popupImg {
+  width: 20%;
+  border-radius: 16px;
+}
+
+.popupName,
+h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.synopsis {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 10px 25%;
+}
+
+.synopsis > * {
+  text-align: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 10px 10%;
+  position: relative;
+  left: 5%;
+}
+
+.metadata p {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cancel {
+  position: fixed;
+  right: 30px;
+  color: white;
+  font-size: 4rem;
+  top: 30px;
+  cursor: pointer;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 30%;
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.name,
+.submit {
+  height: 40px;
+  border: none;
+  border-radius: 16px;
+  text-indent: 10px;
+}
+
+.name::placeholder,
+.text-area::placeholder {
+  font-size: 1rem;
+}
+
+.text-area {
+  height: 300px;
+  border: none;
+  border-radius: 16px;
+  text-indent: 10px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.comments > p {
+  color: white;
+  position: relative;
+  top: 3px;
+  padding-bottom: 4px;
+}
+
+.site > a {
+  color: red;
+  text-decoration: none;
+}
+
+.site > a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+}
