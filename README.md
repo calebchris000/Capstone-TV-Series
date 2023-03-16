@@ -108,7 +108,7 @@ Install this project with:
 
 ```
 
-### Test
+### Running Tests
 
 To to test the project, checkout [Jest](https://jestjs.io/)
 
