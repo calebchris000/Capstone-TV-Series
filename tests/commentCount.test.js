@@ -1,3 +1,4 @@
+/*eslint-disable */
 const jsdom = require('jsdom');
 const getCommentMock = require('../__mocks__/commentCount.js');
 
