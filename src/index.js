@@ -9,4 +9,3 @@ require('./modules/likeCount.js');
 require('./modules/addComments.js');
 require('./modules/commentCount.js');
 require('./modules/latestMovies.js');
-require('./modules/reservation_null.js');
