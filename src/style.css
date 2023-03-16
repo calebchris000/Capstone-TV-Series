@@ -14,34 +14,50 @@ body {
 }
 
 .header {
-  margin-top: 50px;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  padding: 10px 0;
+  z-index: 7;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 8%;
 }
 
 .movieCount {
   color: white;
+  background-color: black;
   position: relative;
   z-index: 1;
-  border: 2px solid white;
-  padding: 2px;
+  padding: 5px;
   border-radius: 6px;
 }
 
 .menu {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .menu > a {
   margin: 0 10px;
   font-size: 1.1rem;
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 600;
 }
 
 .menu > a:hover {
   text-decoration: underline;
-  text-decoration-color: red;
+  text-decoration-color: white;
   text-decoration-thickness: 3px;
 }
 
