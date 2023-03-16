@@ -88,6 +88,7 @@ In order to run this project you need:
 ```
 
 #### MacOS
+
 [Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0.pkg)
 
 ### Setup
@@ -105,6 +106,22 @@ Install this project with:
 ```sh
   npm install
 
+```
+
+### Test
+
+To to test the project, checkout [Jest](https://jestjs.io/)
+
+```sh
+npm install jest --save-dev
+```
+Then, to start the test:
+
+
+or
+
+```sh
+  npx jest
 ```
 
 ### Usage
