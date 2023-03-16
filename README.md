@@ -118,10 +118,8 @@ npm install jest --save-dev
 Then, to start the test:
 
 
-or
-
 ```sh
-  npx jest
+  npm run test
 ```
 
 ### Usage
@@ -131,6 +129,9 @@ To run the project, execute the following command:
 ```sh
   npm start
 ```
+### Deployment
+
+The project has been deployed with Github pages. You can visit the link [here](https://calebchris000.github.io/Capstone-TV-Series/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
