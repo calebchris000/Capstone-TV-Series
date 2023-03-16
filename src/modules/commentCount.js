@@ -9,7 +9,12 @@ const commentCount = () => {
         setTimeout(() => {
           const comments = document.getElementById('comments');
           const number = document.getElementById('number');
-          number.innerHTML = `Comments (${comments.children.length})`;
+          if(comments.children.length > 0) {
+            number.innerHTML = `Comments (${comments.children.length})`;
+          }
+          else {
+            number.innerHTML = `Comments (0)`;
+          }
         }, 2000);
       }
     });
