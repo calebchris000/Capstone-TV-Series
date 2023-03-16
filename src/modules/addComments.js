@@ -3,18 +3,6 @@ import universalCount from './count.js';
 
 const count = universalCount();
 
-const updateOnSubmit = (i) => {
-  setTimeout(async () => {
-    const comments = document.getElementById('comments');
-    comments.innerHTML = '';
-    const data = await getComments(i);
-    data.forEach((element) => {
-      const item = `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
-      comments.insertAdjacentHTML('beforeend', item);
-    });
-  }, 1000);
-};
-
 const postComment = () => {
   const loop = 1;
 
@@ -27,7 +15,6 @@ const postComment = () => {
         await addData(i, userInput.value, commentInput.value);
         userInput.value = '';
         commentInput.value = '';
-        // updateOnSubmit(i);
         setTimeout(() => window.location.reload(), 500)
       }
     });
