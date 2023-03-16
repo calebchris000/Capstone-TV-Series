@@ -22,9 +22,11 @@
   align-items: center;
   overflow: auto;
 }
-.popupItems::-webkit-scrollbar{
+
+.popupItems::-webkit-scrollbar {
   width: 0;
 }
+
 h1 {
   font-size: 15px;
   color: white;

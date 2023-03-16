@@ -1,8 +1,8 @@
-const jsdom = require("jsdom");
+const jsdom = require('jsdom');
+
 const { JSDOM } = jsdom;
 
-const data = 
-`<div class="movieCount">
+const data = `<div class="movieCount">
 <p class='movie'>One</p>
 <p class='movie'>One</p>
 <p class='movie'>One</p>
@@ -13,14 +13,14 @@ const data =
 <p class='movie'>One</p>
 <p class='movie'>One</p>
 <p class='movie'>One</p>
-</div>`
+</div>`;
 
 const dom = new JSDOM(data);
-const document = dom.window.document;
+const { document } = dom.window;
 
 const countMovies = () => {
   const movieCount = document.querySelector('.movieCount');
-  const movies = document.querySelectorAll(".movie");
+  const movies = document.querySelectorAll('.movie');
   movieCount.innerHTML = movies.length;
   return movies.length;
 };
