@@ -15,7 +15,7 @@ const postComment = () => {
         await addData(i, userInput.value, commentInput.value);
         userInput.value = '';
         commentInput.value = '';
-        setTimeout(() => window.location.reload(), 500)
+        setTimeout(() => window.location.reload(), 500);
       }
     });
   }

@@ -9,11 +9,10 @@ const commentCount = () => {
         setTimeout(() => {
           const comments = document.getElementById('comments');
           const number = document.getElementById('number');
-          if(comments.children.length > 0) {
+          if (comments.children.length > 0) {
             number.innerHTML = `Comments (${comments.children.length})`;
-          }
-          else {
-            number.innerHTML = `Comments (0)`;
+          } else {
+            number.innerHTML = 'Comments (0)';
           }
         }, 2000);
       }
