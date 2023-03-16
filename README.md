@@ -63,6 +63,8 @@
 
 - [Live Demo Link](https://calebchris000.github.io/Capstone-TV-Series/dist/)
 
+- [Project Presentation](https://drive.google.com/file/d/1QMSr8ItGrPpVMQRhIZoEizkLZNVEUp37/view?usp=sharing)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
