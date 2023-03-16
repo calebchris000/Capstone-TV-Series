@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 const countMovies = require('../__mocks__/itemCounter.js');
 
 // * To the reviewer:
