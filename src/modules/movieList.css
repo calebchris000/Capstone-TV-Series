@@ -1,0 +1,70 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 150px 20px;
+}
+
+.movie {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.posters {
+  width: 40%;
+  align-self: center;
+  border-radius: 24px;
+}
+
+.movieTitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.nameHeart {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.heart {
+  align-self: center;
+  padding: 0 16px;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.heart:active {
+  transform: scale(0.8);
+}
+
+.likeCount {
+  text-align: center;
+  position: relative;
+  top: -10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.comment,
+.reservation {
+  width: 160px;
+  height: 40px;
+  margin: 10px 0;
+  align-self: center;
+  border: none;
+  border-radius: 16px;
+}

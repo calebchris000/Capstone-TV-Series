@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./images/background.jpg);
+  z-index: 1;
+  background-attachment: fixed;
+}
+
+.header {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  padding: 10px 0;
+  z-index: 7;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 8%;
+}
+
+.movieCount {
+  color: white;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > a {
+  margin: 0 10px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.menu > a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 3px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid red;
+  display: none;
+}
+
+.footer > * {
+  padding: 10px;
+  color: white;
+  font-size: 1.1rem;
+}
